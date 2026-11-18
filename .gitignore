@@ -1,0 +1,40 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+build/
+
+# Node
+node_modules/
+webapp/dist/
+*.tsbuildinfo
+
+# local tools, logs, benchmark output, captures
+.tools/
+*.log
+bench_*.json
+shots/
+.vite/
+captures/
+*.pcap
+dofus-live.pcap
+cra-rl/
+brain/data/guide-pilot/
+brain/data/terrain-preview/
+brain/data/vlm-corpus/
+docs/*_capture_*.png
+docs/*_frame.png
+docs/*_before.png
+docs/*_after.png
+docs/*_output.txt
+docs/network_*.json
+
+# macOS
+.DS_Store
+**/xcuserdata/
+*.xcuserstate
+
+# Local runtime configuration; keep templates/examples under version control.
+brain/config/*.json

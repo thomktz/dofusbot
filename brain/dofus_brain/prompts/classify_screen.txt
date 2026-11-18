@@ -1,0 +1,11 @@
+Tu regardes une capture d'écran du jeu Dofus 3 (client français).
+Classe l'écran dans UNE de ces catégories :
+- "loading" : écran de chargement / noir / changement de carte
+- "world" : exploration de la carte, personnage visible, interface en bas
+- "fight" : combat (grille tactique, timeline des combattants, bouton fin de tour)
+- "dialog" : boîte de dialogue avec un PNJ et des réponses numérotées
+- "popup" : fenêtre modale (niveau supérieur, récompense, confirmation, erreur)
+- "menu" : menu, inventaire, sélection de personnage, options
+- "unknown" : autre chose
+
+Réponds UNIQUEMENT en JSON : {"screen": "<catégorie>", "confidence": <0..1>, "reason": "<court, en français>"}

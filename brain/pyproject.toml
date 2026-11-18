@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dofus_brain"
+version = "0.1.0"
+description = "Backend + agent loop for dofus-agent: perception, game state, planners, LLM client, WebSocket server"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.110",
+  "uvicorn>=0.29",
+  "websockets>=12",
+  "httpx>=0.27",
+  "requests>=2.31",
+  "numpy>=1.26",
+  "pillow>=10.1",
+  "thrift>=0.20",
+  "playwright>=1.45",
+]
+
+[project.optional-dependencies]
+mac = [
+  "pyobjc-framework-Vision>=10; sys_platform == 'darwin'",
+  "pyobjc-framework-Quartz>=10; sys_platform == 'darwin'",
+  "ocrmac>=1.0; sys_platform == 'darwin'",
+]
+mlx = ["mlx-vlm>=0.1; sys_platform == 'darwin'"]
+tesseract = ["pytesseract>=0.3"]
+dev = ["pytest>=8", "pytest-asyncio>=0.23"]
+protocol = ["protobuf>=5.28,<6", "frida>=17.20; sys_platform == 'darwin'"]
+
+[project.scripts]
+dofus-brain = "dofus_brain.server:main"
+
+[tool.setuptools.packages.find]
+include = ["dofus_brain*"]
+
+[tool.setuptools.package-data]
+dofus_brain = ["prompts/*.txt"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"

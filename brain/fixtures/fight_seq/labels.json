@@ -1,0 +1,52 @@
+[
+ {
+  "file": "01_map_hover_mob.jpg",
+  "captured": "215226_036.png",
+  "label": "hovering over mobs"
+ },
+ {
+  "file": "02_loading.jpg",
+  "captured": "215227_040.png",
+  "label": "black loading screen"
+ },
+ {
+  "file": "03_placement_challenges.jpg",
+  "captured": "215228_045.png",
+  "label": "character placement (waiting for Choisir les challenges)"
+ },
+ {
+  "file": "04_placement_ready.jpg",
+  "captured": "215231_052.png",
+  "label": "challenge choice, (click Pret)"
+ },
+ {
+  "file": "05_my_turn_pm.jpg",
+  "captured": "215234_064.png",
+  "label": "My turn, the 3 PM grid is showed."
+ },
+ {
+  "file": "06_arrived_spell_selected.jpg",
+  "captured": "215239_085.png",
+  "label": "Its arrived there and i clicked a spell"
+ },
+ {
+  "file": "07_spell_landed.jpg",
+  "captured": "215244_102.png",
+  "label": "Spell landed, showing -1PA"
+ },
+ {
+  "file": "08_monsters_turn.jpg",
+  "captured": "215253_126.png",
+  "label": "Monster's turn to play. My Fin de tour button is grey"
+ },
+ {
+  "file": "09_level_up_fermer.jpg",
+  "captured": "215302_162.png",
+  "label": "The fight is won, I leveled up, click Fermer"
+ },
+ {
+  "file": "10_fight_result_fermer.jpg",
+  "captured": "215306_179.png",
+  "label": "The post fight window, click Fermer"
+ }
+]

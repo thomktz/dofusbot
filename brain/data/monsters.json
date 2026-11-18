@@ -1,0 +1,59 @@
+{
+ "_comment": "Learned in game. null = not read yet. Names from the list_npcs scan in Incarnam [2,-4] on 9 Nov 2026.",
+ "monsters": {
+  "Bouftou Nuageux": {
+   "resistances": {
+    "neutral": null,
+    "earth": null,
+    "fire": null,
+    "water": null,
+    "air": null
+   },
+   "ap": null,
+   "mp": null,
+   "attack": {
+    "min_range": null,
+    "max_range": null,
+    "los": null,
+    "damage": null
+   },
+   "seen": 1
+  },
+  "Bouftou Orageux": {
+   "resistances": {
+    "neutral": null,
+    "earth": null,
+    "fire": null,
+    "water": null,
+    "air": null
+   },
+   "ap": null,
+   "mp": null,
+   "attack": {
+    "min_range": null,
+    "max_range": null,
+    "los": null,
+    "damage": null
+   },
+   "seen": 1
+  },
+  "Bouftou Pâlichon": {
+   "resistances": {
+    "neutral": null,
+    "earth": null,
+    "fire": null,
+    "water": null,
+    "air": null
+   },
+   "ap": null,
+   "mp": null,
+   "attack": {
+    "min_range": null,
+    "max_range": null,
+    "los": null,
+    "damage": null
+   },
+   "seen": 1
+  }
+ }
+}

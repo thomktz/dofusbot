@@ -1,0 +1,341 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4E0F8E7530AE5E7E008D6490 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A20000000000000000000004 /* NetworkExtension.framework */; };
+		A10000000000000000000001 /* Sources/DofusAgentHost/DofusAgentHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000001 /* Sources/DofusAgentHost/DofusAgentHost.swift */; };
+		A10000000000000000000002 /* Sources/DofusTransparentProxy/DofusTransparentProxyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000002 /* Sources/DofusTransparentProxy/DofusTransparentProxyProvider.swift */; };
+		A10000000000000000000003 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A20000000000000000000003 /* AppKit.framework */; };
+		A10000000000000000000004 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A20000000000000000000004 /* NetworkExtension.framework */; };
+		A10000000000000000000005 /* SystemExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A20000000000000000000005 /* SystemExtensions.framework */; };
+		A10000000000000000000006 /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A20000000000000000000006 /* Network.framework */; };
+		A10000000000000000000007 /* DofusTransparentProxy.systemextension in Embed System Extensions */ = {isa = PBXBuildFile; fileRef = A20000000000000000000008 /* DofusTransparentProxy.systemextension */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4E0F8E7630AE5E81008D6490 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A50000000000000000000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A60000000000000000000002;
+			remoteInfo = DofusTransparentProxy;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A30000000000000000000005 /* Embed System Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(SYSTEM_EXTENSIONS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+				A10000000000000000000007 /* DofusTransparentProxy.systemextension in Embed System Extensions */,
+			);
+			name = "Embed System Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A20000000000000000000001 /* Sources/DofusAgentHost/DofusAgentHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/DofusAgentHost/DofusAgentHost.swift; sourceTree = SOURCE_ROOT; };
+		A20000000000000000000002 /* Sources/DofusTransparentProxy/DofusTransparentProxyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/DofusTransparentProxy/DofusTransparentProxyProvider.swift; sourceTree = SOURCE_ROOT; };
+		A20000000000000000000003 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		A20000000000000000000004 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		A20000000000000000000005 /* SystemExtensions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemExtensions.framework; path = System/Library/Frameworks/SystemExtensions.framework; sourceTree = SDKROOT; };
+		A20000000000000000000006 /* Network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Network.framework; path = System/Library/Frameworks/Network.framework; sourceTree = SDKROOT; };
+		A20000000000000000000007 /* DofusAgent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = DofusAgent.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A20000000000000000000008 /* DofusTransparentProxy.systemextension */ = {isa = PBXFileReference; explicitFileType = "wrapper.system-extension"; path = DofusTransparentProxy.systemextension; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A30000000000000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000000000000000000003 /* AppKit.framework in Frameworks */,
+				4E0F8E7530AE5E7E008D6490 /* NetworkExtension.framework in Frameworks */,
+				A10000000000000000000005 /* SystemExtensions.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A30000000000000000000002 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000000000000000000004 /* NetworkExtension.framework in Frameworks */,
+				A10000000000000000000006 /* Network.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A40000000000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				A40000000000000000000002 /* Sources */,
+				A40000000000000000000003 /* Resources */,
+				A40000000000000000000004 /* Frameworks */,
+				A40000000000000000000005 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A40000000000000000000002 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000001 /* Sources/DofusAgentHost/DofusAgentHost.swift */,
+				A20000000000000000000002 /* Sources/DofusTransparentProxy/DofusTransparentProxyProvider.swift */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		A40000000000000000000003 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		A40000000000000000000004 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000003 /* AppKit.framework */,
+				A20000000000000000000004 /* NetworkExtension.framework */,
+				A20000000000000000000005 /* SystemExtensions.framework */,
+				A20000000000000000000006 /* Network.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A40000000000000000000005 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000007 /* DofusAgent.app */,
+				A20000000000000000000008 /* DofusTransparentProxy.systemextension */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A60000000000000000000001 /* DofusAgent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A70000000000000000000002 /* Build configuration list for PBXNativeTarget "DofusAgent" */;
+			buildPhases = (
+				A30000000000000000000003 /* Sources */,
+				A30000000000000000000001 /* Frameworks */,
+				A30000000000000000000005 /* Embed System Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A80000000000000000000001 /* PBXTargetDependency */,
+			);
+			name = DofusAgent;
+			productName = DofusAgent;
+			productReference = A20000000000000000000007 /* DofusAgent.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A60000000000000000000002 /* DofusTransparentProxy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A70000000000000000000003 /* Build configuration list for PBXNativeTarget "DofusTransparentProxy" */;
+			buildPhases = (
+				A30000000000000000000004 /* Sources */,
+				A30000000000000000000002 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DofusTransparentProxy;
+			productName = DofusTransparentProxy;
+			productReference = A20000000000000000000008 /* DofusTransparentProxy.systemextension */;
+			productType = "com.apple.product-type.system-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A50000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					A60000000000000000000001 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					A60000000000000000000002 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+				};
+			};
+			buildConfigurationList = A70000000000000000000001 /* Build configuration list for PBXProject "DofusAgent" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A40000000000000000000001;
+			productRefGroup = A40000000000000000000005 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A60000000000000000000001 /* DofusAgent */,
+				A60000000000000000000002 /* DofusTransparentProxy */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A30000000000000000000003 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000000000000000000001 /* Sources/DofusAgentHost/DofusAgentHost.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A30000000000000000000004 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000000000000000000002 /* Sources/DofusTransparentProxy/DofusTransparentProxyProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A80000000000000000000001 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A60000000000000000000002 /* DofusTransparentProxy */;
+			targetProxy = 4E0F8E7630AE5E81008D6490 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A90000000000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A90000000000000000000002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		A90000000000000000000003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Entitlements/DofusAgent.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KCN4KA73WG;
+				INFOPLIST_FILE = Resources/Host/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.thomaskientz.dofus-agent";
+				PRODUCT_NAME = DofusAgent;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A90000000000000000000004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Entitlements/DofusAgent.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KCN4KA73WG;
+				INFOPLIST_FILE = Resources/Host/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.thomaskientz.dofus-agent";
+				PRODUCT_NAME = DofusAgent;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		A90000000000000000000005 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Entitlements/DofusTransparentProxy.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Resources/DofusTransparentProxy-Info.plist";
+				MACH_O_TYPE = mh_bundle;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.thomaskientz.dofus-agent.transparent-proxy";
+				PRODUCT_NAME = DofusTransparentProxy;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				SYSTEM_EXTENSION_API_ONLY = YES;
+			};
+			name = Debug;
+		};
+		A90000000000000000000006 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Entitlements/DofusTransparentProxy.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Resources/DofusTransparentProxy-Info.plist";
+				MACH_O_TYPE = mh_bundle;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.thomaskientz.dofus-agent.transparent-proxy";
+				PRODUCT_NAME = DofusTransparentProxy;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYSTEM_EXTENSION_API_ONLY = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A70000000000000000000001 /* Build configuration list for PBXProject "DofusAgent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A90000000000000000000001 /* Debug */,
+				A90000000000000000000002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A70000000000000000000002 /* Build configuration list for PBXNativeTarget "DofusAgent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A90000000000000000000003 /* Debug */,
+				A90000000000000000000004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A70000000000000000000003 /* Build configuration list for PBXNativeTarget "DofusTransparentProxy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A90000000000000000000005 /* Debug */,
+				A90000000000000000000006 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A50000000000000000000001 /* Project object */;
+}
