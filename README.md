@@ -43,8 +43,8 @@ winget install --id Git.Git -e --source winget --accept-package-agreements --acc
 & 'C:\Program Files\Git\cmd\git.exe' clone https://github.com/thomktz/dofusbot.git C:\dofusbot
 ```
 
-Then open `C:\dofusbot` in File Explorer, right-click
-`setup-windows.ps1`, and select **Run with PowerShell**.  That repository
+Then open `C:\dofusbot` in File Explorer and double-click
+`START-SETUP.cmd`.  That repository
 script installs Python and Node, creates `.venv`, installs the Python and web
 dependencies, and offers to start the verified mock dashboard at
 http://localhost:5173.  No more commands need to be typed by hand.
