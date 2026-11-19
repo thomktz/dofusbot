@@ -34,38 +34,24 @@ Mac.  Install **VMware Tools** first, restart the VM, and verify that Edge can
 reach the internet.  The local vision model stays on the Mac; do not install
 Ollama in the 8 GB VM.
 
-### Type these before cloning the repository
+### Type only these two commands before cloning
 
-Open **PowerShell** in Windows and type:
+Open **PowerShell** in Windows and type these two commands, one at a time:
 
 ```powershell
 winget install --id Git.Git -e --source winget --accept-package-agreements --accept-source-agreements
-winget install --id Python.Python.3.12 -e --source winget --accept-package-agreements --accept-source-agreements
-winget install --id OpenJS.NodeJS.LTS -e --source winget --accept-package-agreements --accept-source-agreements
+& 'C:\Program Files\Git\cmd\git.exe' clone https://github.com/thomktz/dofusbot.git C:\dofusbot
 ```
 
-Close PowerShell and open it again so that `git`, `py`, and `npm` are on
-`PATH`.
+Then open `C:\dofusbot` in File Explorer, right-click
+`setup-windows.ps1`, and select **Run with PowerShell**.  That repository
+script installs Python and Node, creates `.venv`, installs the Python and web
+dependencies, and offers to start the verified mock dashboard at
+http://localhost:5173.  No more commands need to be typed by hand.
 
-### Type these after cloning
-
-```powershell
-cd C:\
-git clone https://github.com/thomktz/dofusbot.git
-cd C:\dofusbot
-py -3.12 -m venv .venv
-.\.venv\Scripts\python.exe -m pip install --upgrade pip
-.\.venv\Scripts\python.exe -m pip install -e '.\brain[dev,protocol]'
-cd webapp
-npm ci
-cd ..
-.\run.ps1 -Mock
-```
-
-The final command starts the Windows dashboard in a verified mock mode at
-http://localhost:5173.  It deliberately does not start a game client.  The
-Windows live-protocol launcher is added separately after the Ankama Launcher
-and its Dofus executable are installed in the VM.
+The bootstrap deliberately does not start a game client.  The Windows
+live-protocol launcher is configured after the Ankama Launcher and its Dofus
+executable are installed in the VM.
 
 ## Run
 
