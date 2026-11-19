@@ -53,6 +53,20 @@ The bootstrap deliberately does not start a game client.  The Windows
 live-protocol launcher is configured after the Ankama Launcher and its Dofus
 executable are installed in the VM.
 
+### Test whether Dofus itself runs in the VM
+
+After the Ankama Launcher reports Dofus as installed, open PowerShell in the
+cloned repository and run:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\test-dofus.ps1
+```
+
+This is a plain process-launch test only: it does not start the dashboard,
+Frida, a proxy, or any bot code.  The game may show a normal launcher/login
+connection error when opened this way; the pass condition is that the Dofus
+window itself appears and does not immediately crash.
+
 ## Run
 
 ```bash
