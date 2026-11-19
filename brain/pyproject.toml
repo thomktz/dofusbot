@@ -29,7 +29,7 @@ mac = [
 mlx = ["mlx-vlm>=0.1; sys_platform == 'darwin'"]
 tesseract = ["pytesseract>=0.3"]
 dev = ["pytest>=8", "pytest-asyncio>=0.23"]
-protocol = ["protobuf>=5.28,<6", "frida>=17.20; sys_platform == 'darwin'"]
+protocol = ["protobuf>=5.28,<6", "frida>=17.20"]
 
 [project.scripts]
 dofus-brain = "dofus_brain.server:main"
