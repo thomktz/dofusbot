@@ -21,38 +21,56 @@ function Write-Setup([string]$Message, [ConsoleColor]$Color = [ConsoleColor]::Gr
 
 function Install-WingetPackage([string]$Id) {
     Write-Setup "Installing $Id through winget..." Cyan
-    & winget install --id $Id -e --source winget --accept-package-agreements --accept-source-agreements
-    if ($LASTEXITCODE -ne 0) {
+    $WingetOutput = @(& winget install --id $Id -e --source winget --accept-package-agreements --accept-source-agreements 2>&1)
+    $WingetOutput | ForEach-Object { Write-Host $_ }
+    $WingetText = $WingetOutput -join "`n"
+    if ($LASTEXITCODE -ne 0 -and $WingetText -notmatch 'No newer package versions are available') {
         throw "winget could not install $Id (exit $LASTEXITCODE)."
     }
+}
+
+function Find-CommandPath([string[]]$Names) {
+    foreach ($Name in $Names) {
+        $Command = Get-Command $Name -ErrorAction SilentlyContinue
+        if ($null -ne $Command) { return $Command.Source }
+    }
+    return $null
 }
 
 try {
     Remove-Item -LiteralPath $LogPath -Force -ErrorAction SilentlyContinue
     Write-Setup "Dofusbot Windows setup: $Root" Cyan
 
-    $PyLauncher = 'C:\Windows\py.exe'
-    if (-not (Test-Path $PyLauncher)) {
+    $PyLauncher = Find-CommandPath @('py.exe', 'py')
+    $PythonFallback = Find-CommandPath @('python.exe', 'python')
+    if ($null -eq $PyLauncher -and $null -eq $PythonFallback) {
         Install-WingetPackage 'Python.Python.3.12'
     } else {
-        Write-Setup 'Python launcher already installed; keeping it.' Green
+        Write-Setup 'Python already installed; keeping it.' Green
     }
-    if (-not (Test-Path $PyLauncher)) {
-        throw "Python launcher is still missing at $PyLauncher. Restart Windows once, then run this script again."
+    $PyLauncher = Find-CommandPath @('py.exe', 'py')
+    $PythonFallback = Find-CommandPath @('python.exe', 'python')
+    if ($null -eq $PyLauncher -and $null -eq $PythonFallback) {
+        throw 'Python is installed according to winget, but is not available yet. Restart Windows once, then run START-SETUP.cmd again.'
     }
 
-    $Npm = 'C:\Program Files\nodejs\npm.cmd'
-    if (-not (Test-Path $Npm)) {
+    $Npm = Find-CommandPath @('npm.cmd', 'npm')
+    if ($null -eq $Npm) {
         Install-WingetPackage 'OpenJS.NodeJS.LTS'
     } else {
         Write-Setup 'Node.js already installed; keeping it.' Green
     }
-    if (-not (Test-Path $Npm)) {
-        throw "npm is still missing at $Npm. Restart Windows once, then run this script again."
+    $Npm = Find-CommandPath @('npm.cmd', 'npm')
+    if ($null -eq $Npm) {
+        throw 'npm is installed according to winget, but is not available yet. Restart Windows once, then run START-SETUP.cmd again.'
     }
 
     Write-Setup 'Creating Python environment...' Cyan
-    & $PyLauncher -3.12 -m venv .venv
+    if ($null -ne $PyLauncher) {
+        & $PyLauncher -3.12 -m venv .venv
+    } else {
+        & $PythonFallback -m venv .venv
+    }
     if ($LASTEXITCODE -ne 0) { throw 'Could not create the Python environment.' }
     $Python = Join-Path $Root '.venv\Scripts\python.exe'
     & $Python -m pip install --upgrade pip
